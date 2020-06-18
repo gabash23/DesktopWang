@@ -1,3 +1,4 @@
+
 import javafx.util.Duration;
 import java.util.Random;
 
@@ -231,10 +232,9 @@ public class Wang extends Pane {
     public void sound() {
         Random rand = new Random();
         int upperBound = new File("asmr").listFiles().length;
-
+        System.out.println("1");
         AudioClip sound = new AudioClip(this.getClass().getResource("asmr/" + (rand.nextInt(upperBound) + 1) + ".m4a").toString());
         sound.play();
-        //activate();
     }
 
     public void start(double width, double height, Stage ps) {
@@ -374,7 +374,7 @@ public class Wang extends Pane {
     public void avatar() {
         Random rand = new Random();
         int upperBound = new File("avatar").listFiles().length;
-        Image img = new Image("avatar/" + (rand.nextInt(upperBound) + 1) + ".png");
+        Image img = new Image("avatar/"+ (rand.nextInt(upperBound) + 1) + ".png");
         ImageView ryann = new ImageView(img);
         ryann.setFitHeight(200);
         ryann.setFitWidth(200);     
